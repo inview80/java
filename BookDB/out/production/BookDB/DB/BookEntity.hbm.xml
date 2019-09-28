@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DB.BookEntity" table="book" schema="book" lazy="false">
+        <id name="id" column="ID" unsaved-value="null">
+            <generator class="uuid"/>
+        </id>
+        <property name="bookName" column="BookName"/>
+        <!--<property name="BookTypeID" column="BookType"/>-->
+        <property name="publishment" column="Publishment"/>
+        <property name="author" column="Author"/>
+        <property name="publishDate" column="PublishDate"/>
+        <property name="price" column="Price"/>
+        <many-to-one name="BookTypeEntity" column="BookType" class="DB.BooktypeEntity" fetch="join" insert="false"
+                     update="false"/>
+    </class>
+    <query name="getBooksQuery">from BookEntity b</query>
+</hibernate-mapping>

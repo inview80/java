@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="hutool">
+    <CLASSES>
+      <root url="file://D:/java/plug-in/hutool" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/java/plug-in/hutool" />
+    </SOURCES>
+    <jarDirectory url="file://D:/java/plug-in/hutool" recursive="false" />
+    <jarDirectory url="file://D:/java/plug-in/hutool" recursive="false" type="SOURCES" />
+  </library>
+</component>

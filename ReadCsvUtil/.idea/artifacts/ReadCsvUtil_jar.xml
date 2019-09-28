@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="ReadCsvUtil:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ReadCsvUtil_jar</output-path>
+    <root id="root">
+      <element id="archive" name="ReadCsvUtil.jar">
+        <element id="module-output" name="ReadCsvUtil" />
+        <element id="library" level="project" name="Maven: apache-log4j:log4j:1.2.17" />
+        <element id="library" level="project" name="Maven: cn.hutool:hutool-all:4.6.4" />
+      </element>
+    </root>
+  </artifact>
+</component>

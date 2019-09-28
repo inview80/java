@@ -1,0 +1,38 @@
+<component name="libraryTable">
+  <library name="activation-1.1.1">
+    <CLASSES>
+      <root url="jar://D:/java/plug-in/all/activation-1.1.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/asm-4.2.jar!/" />
+      <root url="jar://D:/java/plug-in/all/cglib-3.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-codec-1.11.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-codec-1.12.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-collections4-4.2.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-collections4-4.3.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-compress-1.18.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-logging-1.2.jar!/" />
+      <root url="jar://D:/java/plug-in/all/commons-math3-3.6.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/curvesapi-1.05.jar!/" />
+      <root url="jar://D:/java/plug-in/all/ehcache-3.7.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/FastInfoset-1.2.15.jar!/" />
+      <root url="jar://D:/java/plug-in/all/istack-commons-runtime-3.0.7.jar!/" />
+      <root url="jar://D:/java/plug-in/all/javax.activation-api-1.2.0.jar!/" />
+      <root url="jar://D:/java/plug-in/all/jaxb-api-2.3.0.jar!/" />
+      <root url="jar://D:/java/plug-in/all/jaxb-api-2.3.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/jaxb-core-2.3.0.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/jaxb-impl-2.3.0.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/jaxb-runtime-2.3.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/junit-4.12.jar!/" />
+      <root url="jar://D:/java/plug-in/all/log4j-1.2.17.jar!/" />
+      <root url="jar://D:/java/plug-in/all/poi-4.0.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/poi-4.1.0.jar!/" />
+      <root url="jar://D:/java/plug-in/all/poi-ooxml-4.0.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/poi-ooxml-schemas-4.0.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/slf4j-api-1.7.26.jar!/" />
+      <root url="jar://D:/java/plug-in/all/stax-ex-1.8.jar!/" />
+      <root url="jar://D:/java/plug-in/all/txw2-2.3.1.jar!/" />
+      <root url="jar://D:/java/plug-in/all/xmlbeans-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DB.BooktypeEntity" table="booktype" schema="book">
+        <id name="bookTypeId" column="BookTypeID"/>
+        <property name="bookTypeName" column="BookTypeName"/>
+        <!--<set name="books" inverse="true" fetch="join" lazy="true" >-->
+            <!--<key column="booktype"/>-->
+            <!--<one-to-many class="DB.BookEntity"/>-->
+        <!--</set>-->
+    </class>
+</hibernate-mapping>

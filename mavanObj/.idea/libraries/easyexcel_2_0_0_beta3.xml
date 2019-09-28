@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="easyexcel-2.0.0-beta3">
+    <CLASSES>
+      <root url="jar://D:/java/plug-in/easyexcel-2.0.0-beta3.jar!/" />
+      <root url="jar://D:/java/plug-in/lombok.jar!/" />
+      <root url="jar://D:/java/plug-in/slf4j-api-1.7.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
