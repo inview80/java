@@ -1,5 +1,6 @@
 package passwordManage.secret;
 
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import passwordManage.MyInterface.Des3Abstract;
 
@@ -29,7 +30,7 @@ public class Des3 extends Des3Abstract {
     }
 
     @Override
-    public byte[] encrypt(byte[] content, String key) {
+    public byte[] encrypt(@NonNull byte[] content,@NonNull String key) {
         try {
             // 使用密钥初始化
             Cipher cipher = Cipher.getInstance(DEFAULT_CIPHER_ALGORITHM);
@@ -46,7 +47,7 @@ public class Des3 extends Des3Abstract {
     }
 
     @Override
-    public byte[] decrypt(byte[] content, String key) {
+    public byte[] decrypt(@NonNull byte[] content,@NonNull String key) {
         try {
             // 实例化
             // 使用密钥初始化，设置为解密模式
@@ -67,7 +68,7 @@ public class Des3 extends Des3Abstract {
      *
      * @return
      */
-    private SecretKeySpec getSecretKey(final String key) {
+    private SecretKeySpec getSecretKey(@NonNull final String key) {
         //返回生成指定算法密钥生成器的KeyGenerator 对象
         KeyGenerator kg = null;
         try {

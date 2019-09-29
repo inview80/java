@@ -26,13 +26,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/circleci/keyczar -->
-    <dependency>
-      <groupId>circleci</groupId>
-      <artifactId>keyczar</artifactId>
-      <version>0.71g</version>
-    </dependency>
-
 
     <dependency>
       <groupId>org.bouncycastle</groupId>
@@ -58,12 +51,19 @@
     </dependency>
 
     <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-compress</artifactId>
+      <version>1.18</version>
+    </dependency>
+
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
