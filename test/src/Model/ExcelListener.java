@@ -3,8 +3,8 @@ package Model;
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.excel.metadata.CellData;
-import com.alibaba.excel.read.listener.ReadListener;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import java.util.Map;
 public class ExcelListener<T> extends AnalysisEventListener<T> {
     private List<T> dataLst = new ArrayList<T>();
     private Map<Integer, String> head = new HashMap<>();
-    private static Logger logger = Logger.getLogger(ExcelListener.class);
+    private static Logger logger = LoggerFactory.getLogger(ExcelListener.class);
 private int count=0;
 
     public List<T> getDataLst() {
@@ -29,7 +29,7 @@ private int count=0;
     public void invoke(T t, AnalysisContext analysisContext) {
         dataLst.add(t);
         count++;
-        if(count%10000==0)logger.info("已完成："+count);
+        if(count%10000==0)logger.info("已完成：{}",count);
     }
 
     @Override

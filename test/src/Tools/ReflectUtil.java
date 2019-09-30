@@ -1,7 +1,8 @@
 package Tools;
 
 import com.alibaba.excel.annotation.ExcelProperty;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -10,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReflectUtil {
-    private static Logger logger = Logger.getLogger(ReflectUtil.class);
+    private static Logger logger = LoggerFactory.getLogger(ReflectUtil.class);
 
     public Map<Integer, Field> getPosForFieldToMap(Class<?> tclass) {
         Map<Integer, Field> tmpMap = new HashMap<>();
