@@ -1,13 +1,13 @@
 package randomdata;
 
+import randomdata.base.Database;
 import randomdata.model.*;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -41,6 +41,31 @@ public class ExcelUtil {
             e.printStackTrace();
         }
          return null;
+    }
+    public void readExcel(){
+        File file = new File("src/main/resource/randomData.xlsx");
+        if (!file.exists()) return ;
+        try (InputStream inputStream = new FileInputStream(file)) {
+            Workbook workbook = WorkbookFactory.create(inputStream);
+            for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
+                var sheet = workbook.getSheetAt(i);
+                if (sheet == null) continue;
+                if ( sheet.getSheetName().equals("出版社"))
+                    Database.data.put(sheet.getSheetName(),  ReadPublishment(sheet));
+                if ( sheet.getSheetName().equals("大学"))
+                    Database.data.put(sheet.getSheetName(), ReadUniversity(sheet));
+                if ( sheet.getSheetName().equals("姓"))
+                    Database.data.put(sheet.getSheetName(), ReadFamilyName(sheet));
+                if ( sheet.getSheetName().equals("书名附加"))
+                    Database.data.put(sheet.getSheetName(), ReadAttach(sheet));
+                if ( sheet.getSheetName().equals("省市县"))
+                    Database.data.put(sheet.getSheetName(), ReadCity(sheet));
+                if ( sheet.getSheetName().equals("书类"))
+                    Database.data.put(sheet.getSheetName(), ReadBookType(sheet));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private List ReadBookType(Sheet sheet) {

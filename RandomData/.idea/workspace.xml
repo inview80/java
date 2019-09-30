@@ -4,7 +4,26 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5109a490-b8fd-4a6a-9202-bf09234aea39" name="默认更改列表" comment="" />
+    <list default="true" id="5109a490-b8fd-4a6a-9202-bf09234aea39" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomdata/base/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/libraries/Maven__com_github_javafaker_javafaker_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/libraries/Maven__com_github_mifmif_generex_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/libraries/Maven__dk_brics_automaton_automaton_1_11_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/libraries/Maven__org_yaml_snakeyaml_android_1_23.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomData.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/randomData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/ExcelUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/ExcelUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/RandomUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/RandomUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/randomdata/RandomUtilTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/randomdata/RandomUtilTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/src/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test/src/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../test/test.iml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,22 +36,34 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="599">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="n#build#0;n#project#0;n#!!top" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/base/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="537">
+              <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,11 +74,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="317">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#RandomUtil#0" expanded="true" />
+                <element signature="method#newInstance#0;class#RandomUtil#0" />
+                <element signature="e#677#724#1" />
+                <element signature="method#getProviceCityTownName#0;class#RandomUtil#0" />
+                <element signature="e#909#996#1" />
+                <element signature="e#1206#1486#1" />
+                <element signature="e#1370#1476#1" />
+                <element signature="method#getProviceCityTownAll#0;class#RandomUtil#0" />
+                <element signature="e#1690#1777#1" />
+                <element signature="e#1871#2223#1" />
+                <element signature="e#1918#2213#1" />
+                <element signature="e#1970#2199#1" />
+                <element signature="method#getProviceCityName#0;class#RandomUtil#0" />
+                <element signature="e#2346#2433#1" />
+                <element signature="e#2687#2831#1" />
+                <element signature="method#getBookName#0;class#RandomUtil#0" />
+                <element signature="e#3047#3140#1" />
+                <element signature="method#getBookTypeBig#0;class#RandomUtil#0" />
+                <element signature="e#3338#3427#1" />
+                <element signature="method#getBookTypeSmall#0;class#RandomUtil#0" />
+                <element signature="e#3610#3699#1" />
               </folding>
             </state>
           </provider>
@@ -56,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/IGetCity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="110">
               <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
@@ -65,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="506">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
@@ -77,8 +126,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -93,13 +146,15 @@
         <option value="$PROJECT_DIR$/src/main/java/RandomData/ExcelUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/RandomData/Model/IGetCity.java" />
         <option value="$PROJECT_DIR$/src/main/java/RandomData/Model/IGetBookAboat.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/RandomData/RandomUtilTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/RandomData/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/random/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/randomData/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/base/Database.java" />
       </list>
     </option>
   </component>
@@ -138,12 +193,12 @@
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,50 +222,14 @@
               <item name="RandomData" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RandomData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RandomData" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="randomdata" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RandomData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RandomData" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="randomdata" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RandomData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RandomData" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RandomData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RandomData" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RandomData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RandomData" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,9 +244,10 @@
     <property name="LombokPluginIS_VAL_Enabled" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568904961228" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569834360828" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -244,6 +264,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\项目\java\RandomData\src\main\resource" />
       <recent name="E:\编程项目\java\RandomData\src\main\resource" />
     </key>
   </component>
@@ -259,7 +280,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Database">
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="randomdata.base.Database" />
+      <module name="RandomData" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="randomdata.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RandomUtilTest.getBookName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RandomData" />
       <extension name="coverage">
@@ -278,6 +312,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Database" />
         <item itemvalue="JUnit.RandomUtilTest.getBookName" />
       </list>
     </recent_temporary>
@@ -298,6 +333,7 @@
       <workItem from="1568902958555" duration="1974000" />
       <workItem from="1568905014748" duration="1122000" />
       <workItem from="1568986504283" duration="597000" />
+      <workItem from="1569832092830" duration="2242000" />
     </task>
     <servers />
   </component>
@@ -310,13 +346,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10538000" />
+    <option name="totallyTimeSpent" value="12780000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26992288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -325,7 +361,7 @@
       <window_info id="设计器" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32823366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -337,7 +373,9 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="调试" order="14" />
+      <window_info anchor="bottom" id="调试" order="14" weight="0.32962447" />
+      <window_info anchor="right" id="Codota" />
+      <window_info anchor="right" id="Word Book" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -352,6 +390,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/RandomData/test/RandomUtilTest.java" />
@@ -410,46 +460,74 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/RandomData/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#RandomUtil#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/IGetCity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="110">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="506">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="method#newInstance#0;class#RandomUtil#0" />
+            <element signature="e#677#724#1" />
+            <element signature="method#getProviceCityTownName#0;class#RandomUtil#0" />
+            <element signature="e#909#996#1" />
+            <element signature="e#1206#1486#1" />
+            <element signature="e#1370#1476#1" />
+            <element signature="method#getProviceCityTownAll#0;class#RandomUtil#0" />
+            <element signature="e#1690#1777#1" />
+            <element signature="e#1871#2223#1" />
+            <element signature="e#1918#2213#1" />
+            <element signature="e#1970#2199#1" />
+            <element signature="method#getProviceCityName#0;class#RandomUtil#0" />
+            <element signature="e#2346#2433#1" />
+            <element signature="e#2687#2831#1" />
+            <element signature="method#getBookName#0;class#RandomUtil#0" />
+            <element signature="e#3047#3140#1" />
+            <element signature="method#getBookTypeBig#0;class#RandomUtil#0" />
+            <element signature="e#3338#3427#1" />
+            <element signature="method#getBookTypeSmall#0;class#RandomUtil#0" />
+            <element signature="e#3610#3699#1" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="273">
+          <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/base/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
