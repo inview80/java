@@ -4,15 +4,13 @@ import Model.CombinedSIRfromEISBoral;
 import Model.ExcelListener;
 import cn.hutool.core.io.FileUtil;
 import com.alibaba.excel.EasyExcel;
-import lombok.extern.log4j.Log4j;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-@Log4j
+@Slf4j
 public class MyExcelUitl {
-    private static Logger logger = Logger.getLogger(MyExcelUitl.class);
 //    public void WriteExcel(String filepath, List<? extends BaseRowModel> dataLst) {
 //        try( OutputStream out = FileUtil.getOutputStream(filepath)) {
 //            ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLSX);
@@ -27,12 +25,12 @@ public class MyExcelUitl {
 
     public void ReadExcel(String filepath) {
         var lis = new ExcelListener<CombinedSIRfromEISBoral>();
-        logger.info("开始读excel文件");
+        log.info("开始读excel文件");
         try( InputStream inputStream = FileUtil.getInputStream(filepath)) {
             EasyExcel.read(inputStream, CombinedSIRfromEISBoral.class, lis).sheet().doRead();
-            logger.info(lis.getHead());
-            logger.info(lis.getDataLst().get(0));
-            logger.info(lis.getDataLst().get(lis.getDataLst().size() - 1));
+            log.info(lis.getHead());
+            log.info(lis.getDataLst().get(0));
+            log.info(lis.getDataLst().get(lis.getDataLst().size() - 1));
         } catch (IOException e) {
             e.printStackTrace();
         }
