@@ -1,75 +1,86 @@
 package randomdata;
 
-import randomdata.base.Database;
-import randomdata.model.*;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import randomdata.model.*;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.*;
 
 public class ExcelUtil {
-    private static ExcelUtil fragment;
-
-     <T> List<T> readExcel(Class<T> tClass) {
-        File file = new File("randomData.xlsx");
+    Map<String, List> readExcel() {
+        File file = new File("src/main/resource/randomData.xlsx");
         if (!file.exists()) return null;
+        Map<String, List> result = new HashMap<>(6);
+
         try (InputStream inputStream = new FileInputStream(file)) {
             Workbook workbook = WorkbookFactory.create(inputStream);
+            List tmp = null;
             for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
                 var sheet = workbook.getSheetAt(i);
                 if (sheet == null) continue;
-                if (tClass.getName().equals(Publishment.class.getName()) && sheet.getSheetName().equals("出版社"))
-                    return ReadPublishment(sheet);
-                if (tClass.equals(University.class) && sheet.getSheetName().equals("大学"))
-                    return ReadUniversity(sheet);
-                if (tClass.equals(FamilyFirstName.class) && sheet.getSheetName().equals("姓"))
-                    return ReadFamilyName(sheet);
-                if (tClass.equals(BookAttach.class) && sheet.getSheetName().equals("书名附加"))
-                    return ReadAttach(sheet);
-                if (tClass.equals(Provice.class) && sheet.getSheetName().equals("省市县"))
-                    return ReadCity(sheet);
-                if (tClass.equals(BookType.class) && sheet.getSheetName().equals("书类"))
-                    return ReadBookType(sheet);
+                switch (sheet.getSheetName()) {
+                    case "出版社":
+                        tmp = ReadPublishment(sheet);
+                        break;
+                    case "大学":
+                        tmp = ReadUniversity(sheet);
+                        break;
+                    case "姓":
+                        tmp = ReadFamilyName(sheet);
+                        break;
+                    case "书名附加":
+                        tmp = ReadAttach(sheet);
+                        break;
+                    case "省市县":
+                        tmp = ReadCity(sheet);
+                        break;
+                    case "书类":
+                        tmp =ReadBookType(sheet);
+                        break;
+                    default:
+                        break;
+                }
+                result.put(sheet.getSheetName(), tmp);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-         return null;
-    }
-    public void readExcel(){
-        File file = new File("src/main/resource/randomData.xlsx");
-        if (!file.exists()) return ;
-        try (InputStream inputStream = new FileInputStream(file)) {
-            Workbook workbook = WorkbookFactory.create(inputStream);
-            for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
-                var sheet = workbook.getSheetAt(i);
-                if (sheet == null) continue;
-                if ( sheet.getSheetName().equals("出版社"))
-                    Database.data.put(sheet.getSheetName(),  ReadPublishment(sheet));
-                if ( sheet.getSheetName().equals("大学"))
-                    Database.data.put(sheet.getSheetName(), ReadUniversity(sheet));
-                if ( sheet.getSheetName().equals("姓"))
-                    Database.data.put(sheet.getSheetName(), ReadFamilyName(sheet));
-                if ( sheet.getSheetName().equals("书名附加"))
-                    Database.data.put(sheet.getSheetName(), ReadAttach(sheet));
-                if ( sheet.getSheetName().equals("省市县"))
-                    Database.data.put(sheet.getSheetName(), ReadCity(sheet));
-                if ( sheet.getSheetName().equals("书类"))
-                    Database.data.put(sheet.getSheetName(), ReadBookType(sheet));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        return result;
     }
 
+//    public void readExcel() {
+//        File file = new File("src/main/resource/randomData.xlsx");
+//        if (!file.exists()) return;
+//        try (InputStream inputStream = new FileInputStream(file)) {
+//            Workbook workbook = WorkbookFactory.create(inputStream);
+//            for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
+//                var sheet = workbook.getSheetAt(i);
+//                if (sheet == null) continue;
+//                if (sheet.getSheetName().equals("出版社"))
+//                    Database.data.put(sheet.getSheetName(), ReadPublishment(sheet));
+//                if (sheet.getSheetName().equals("大学"))
+//                    Database.data.put(sheet.getSheetName(), ReadUniversity(sheet));
+//                if (sheet.getSheetName().equals("姓"))
+//                    Database.data.put(sheet.getSheetName(), ReadFamilyName(sheet));
+//                if (sheet.getSheetName().equals("书名附加"))
+//                    Database.data.put(sheet.getSheetName(), ReadAttach(sheet));
+//                if (sheet.getSheetName().equals("省市县"))
+//                    Database.data.put(sheet.getSheetName(), ReadCity(sheet));
+//                if (sheet.getSheetName().equals("书类"))
+//                    Database.data.put(sheet.getSheetName(), ReadBookType(sheet));
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     private List ReadBookType(Sheet sheet) {
-        var booktypeList = new HashSet<BookType>();
+        var bookTypeSet = new HashSet<BookType>();
         var tmp = sheet.iterator();
         BookType bt = null;
         while (tmp.hasNext()) {
@@ -78,8 +89,9 @@ public class ExcelUtil {
             String strTmp = cell.getStringCellValue();
             if (!strTmp.isBlank()) {
                 if (!strTmp.contains(",")) {
-                    if (bt != null)
-                        booktypeList.add(bt);
+                    if (bt != null) {
+                        bookTypeSet.add(bt);
+                    }
                     bt = new BookType(strTmp);
                 } else {
                     String[] detail = strTmp.split(",");
@@ -94,15 +106,14 @@ public class ExcelUtil {
             }
         }
         if (bt != null)
-            booktypeList.add( bt );
-        return new ArrayList<>(booktypeList);
-
+            bookTypeSet.add(bt);
+        return new ArrayList<>(bookTypeSet);
     }
 
     private List ReadCity(Sheet sheet) {
-        var provinceList = new HashSet<Provice>();
+        var provinceList = new HashSet<Province>();
         var tmp = sheet.iterator();
-        Provice p = null;
+        Province p = null;
         while (tmp.hasNext()) {
             Cell cell = tmp.next().getCell(0);
             if (cell == null) continue;
@@ -111,7 +122,7 @@ public class ExcelUtil {
                 if (!strTmp.contains("：")) {
                     if (p != null)
                         provinceList.add(p);
-                    p = new Provice(strTmp);
+                    p = new Province(strTmp);
                 } else {
                     String[] city = strTmp.split("：");
                     if (city.length > 0) {
@@ -180,14 +191,9 @@ public class ExcelUtil {
             var cell = sheet.getRow(row).getCell(0);
             if (cell == null) continue;
             String strTmp = cell.toString();
-            if (!"".equals(strTmp) && strTmp != null) publishLst.add(new Publishment(strTmp));
+            if (strTmp != null && !"".equals(strTmp)) publishLst.add(new Publishment(strTmp));
         }
         return new ArrayList<>(publishLst);
-    }
-
-     static ExcelUtil newInstance() {
-        if (fragment == null) fragment = new ExcelUtil();
-        return fragment;
     }
 
 }

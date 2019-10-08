@@ -1,5 +1,6 @@
 package randomdata;
 
+import lombok.Setter;
 import randomdata.model.*;
 
 import java.util.ArrayList;
@@ -8,36 +9,66 @@ import java.util.Random;
 
 /**
  * @author inview
- * @date  2019-9-19
+ * @date 2019-9-19
  * 工具类，可自动生成中文省、市、区地址，以及3、4个字的中文名，以及出版社名，书名
  */
 public class RandomUtil implements IGetCity, IGetBookAboat {
-    private Random random;
+    @Setter
+    private Random random = new Random();
     private List<BookAttach> bookAttachList;
     private List<BookType> bookTypeList;
-    private List<Provice> proviceList;
+    private List<Province> provinceList;
     private List<FamilyFirstName> familynameList;
     private List<Publishment> publishmentList;
     private List<University> universityList;
-    private static RandomUtil grd;
+    private static RandomUtil instance;
 
-    public static RandomUtil newInstance() {
-        if (grd == null) {
-            grd = new RandomUtil();
+    public static RandomUtil getInstance() {
+        if (instance == null) {
+            instance = new RandomUtil();
         }
-        return grd;
+        return instance;
     }
 
     private RandomUtil() {
-        random = new Random();
+        loadData();
+    }
+
+    private void loadData() {
+        ExcelUtil eu=new ExcelUtil();
+        var map = eu.readExcel();
+        if (map == null || map.size() == 0) {
+            throw new NullPointerException("读取数据文件错误。没找到randomData.xlsx文件。");
+        }
+        for (Object item : map.keySet()) {
+            switch (item.toString()) {
+                case "出版社":
+                    publishmentList = (List<Publishment>) map.get(item.toString());
+                    break;
+                case "大学":
+                    universityList = ((List<University>) map.get(item.toString()));
+                    break;
+                case "姓":
+                    familynameList = ((List<FamilyFirstName>) map.get(item.toString()));
+                    break;
+                case "书名附加":
+                    bookAttachList = ((List<BookAttach>) map.get(item.toString()));
+                    break;
+                case "省市县":
+                    provinceList = ((List<Province>) map.get(item.toString()));
+                    break;
+                case "书类":
+                    bookTypeList = ((List<BookType>) map.get(item.toString()));
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     @Override
-    public String getProviceCityTownName() {
-        if (proviceList == null) {
-            proviceList = ExcelUtil.newInstance().readExcel(Provice.class);
-        }
-        Provice proTmp = proviceList.get(random.nextInt(proviceList.size()));
+    public String getProvinceCityTownName() {
+        Province proTmp = provinceList.get(random.nextInt(provinceList.size()));
         String townStr = null;
         City cityTmp = null;
         if (proTmp.getCitys() != null && proTmp.getCitys().size() > 0) {
@@ -46,19 +77,17 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
                 townStr = cityTmp.getTown().get(random.nextInt(cityTmp.getTown().size()));
             }
         }
-        return proTmp.getProviceName() + (cityTmp != null ? cityTmp.getCityName() : "") + townStr;
+        return proTmp.getProvinceName() + (cityTmp != null ? cityTmp.getCityName() : "") + (townStr!=null? townStr :"");
     }
 
     @Override
-    public List<String> getProviceCityTownAll() {
-        if (proviceList == null) {
-            proviceList = ExcelUtil.newInstance().readExcel(Provice.class);
-        }
+    public List<String> getProvinceCityTownAll() {
         List<String> resultList = new ArrayList<>();
-        for (Provice pro : proviceList) {
+        for (Province pro : provinceList) {
             for (City city : pro.getCitys()) {
                 for (String str : city.getTown()) {
-                    String strTmp =city.getCityName().startsWith(pro.getProviceName())  ? city.getCityName() + str : pro.getProviceName() + city.getCityName() + str;
+                    String strTmp = city.getCityName().startsWith(pro.getProvinceName()) ? city.getCityName() + str :
+                            pro.getProvinceName() + city.getCityName() + str;
                     resultList.add(strTmp);
                 }
             }
@@ -67,41 +96,30 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     }
 
     @Override
-    public String getProviceCityName() {
-        if (proviceList == null) {
-            proviceList = ExcelUtil.newInstance().readExcel(Provice.class);
-        }
-        int proNo = random.nextInt(proviceList.size());
-        String proStr = proviceList.get(proNo).getProviceName();
+    public String getProvinceCityName() {
+        int proNo = random.nextInt(provinceList.size());
+        String proStr = provinceList.get(proNo).getProvinceName();
         String cityStr = "";
-        if (proviceList.get(proNo).getCitys() != null && proviceList.get(proNo).getCitys().size() > 0) {
-            cityStr = proviceList.get(proNo).getCitys().get(random.nextInt(proviceList.get(proNo).getCitys().size())).getCityName();
+        if (provinceList.get(proNo).getCitys() != null && provinceList.get(proNo).getCitys().size() > 0) {
+            cityStr =
+                    provinceList.get(proNo).getCitys().get(random.nextInt(provinceList.get(proNo).getCitys().size())).getCityName();
         }
         return cityStr.startsWith(proStr) ? cityStr : proStr + cityStr;
     }
 
     @Override
     public String getBookName() {
-        String cityName = getProviceCityTownName();
-        if (bookAttachList == null) {
-            bookAttachList = ExcelUtil.newInstance().readExcel(BookAttach.class);
-        }
+        String cityName = getProvinceCityTownName();
         return cityName + bookAttachList.get(random.nextInt(bookAttachList.size())).getBookAttachName();
     }
 
     @Override
-    public String getBookTypeBig() {
-        if (bookTypeList == null) {
-            bookTypeList = ExcelUtil.newInstance().readExcel(BookType.class);
-        }
+    public String getBookTypeSimple() {
         return bookTypeList.get(random.nextInt(bookTypeList.size())).getBookTypeName();
     }
 
     @Override
-    public String getBookTypeSmall() {
-        if (bookTypeList == null) {
-            bookTypeList = ExcelUtil.newInstance().readExcel(BookType.class);
-        }
+    public String getBookTypeDetails() {
         BookType bt = bookTypeList.get(random.nextInt(bookTypeList.size()));
         return bt.getBookTypeName() + "," + bt.getDetailsList().get(random.nextInt(bt.getDetailsList().size()));
     }

@@ -10,16 +10,16 @@ public interface IGetCity {
      * 合成省、市、县名称
      * @return String
      */
-    String getProviceCityTownName();
+    String getProvinceCityTownName();
     /**
      * 获取所有省、市、县名称数据到列表
      * @return
      */
-    List<String> getProviceCityTownAll();
+    List<String> getProvinceCityTownAll();
 
     /**
      * 合成省、市名称
      * @return
      */
-    String getProviceCityName();
+    String getProvinceCityName();
 }
