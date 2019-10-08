@@ -25,7 +25,7 @@ public class ExcelUtil {
                 if (sheet == null) continue;
                 switch (sheet.getSheetName()) {
                     case "出版社":
-                        tmp = ReadPublishment(sheet);
+                        tmp = ReadPublisher(sheet);
                         break;
                     case "大学":
                         tmp = ReadUniversity(sheet);
@@ -62,7 +62,7 @@ public class ExcelUtil {
 //                var sheet = workbook.getSheetAt(i);
 //                if (sheet == null) continue;
 //                if (sheet.getSheetName().equals("出版社"))
-//                    Database.data.put(sheet.getSheetName(), ReadPublishment(sheet));
+//                    Database.data.put(sheet.getSheetName(), ReadPublisher(sheet));
 //                if (sheet.getSheetName().equals("大学"))
 //                    Database.data.put(sheet.getSheetName(), ReadUniversity(sheet));
 //                if (sheet.getSheetName().equals("姓"))
@@ -185,15 +185,16 @@ public class ExcelUtil {
         return new ArrayList<>(uniLst);
     }
 
-    private List ReadPublishment(Sheet sheet) {
-        var publishLst = new HashSet<Publishment>();
+    private List ReadPublisher(Sheet sheet) {
+        var publishLst = new HashSet<Publisher>();
         for (int row = sheet.getFirstRowNum(); row <= sheet.getLastRowNum(); row++) {
             var cell = sheet.getRow(row).getCell(0);
             if (cell == null) continue;
             String strTmp = cell.toString();
-            if (strTmp != null && !"".equals(strTmp)) publishLst.add(new Publishment(strTmp));
+            if (strTmp != null && !"".equals(strTmp)) publishLst.add(new Publisher(strTmp));
         }
         return new ArrayList<>(publishLst);
     }
+
 
 }

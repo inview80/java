@@ -1,20 +1,17 @@
 package randomdata.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@EqualsAndHashCode(exclude ={"detailsList"} )
+@Data
+@EqualsAndHashCode(exclude = {"detailsList"})
 @ToString(exclude = {"detailsList"})
+@RequiredArgsConstructor
 public class BookType {
-    @Getter @Setter private String bookTypeName;
-    @Getter @Setter private List<String> detailsList=new ArrayList<>();
+    @NonNull
+    private String bookTypeName;
+    private List<String> detailsList = new ArrayList<>();
 
-    public BookType(String bookTypeName) {
-        this.bookTypeName = bookTypeName;
-    }
 }

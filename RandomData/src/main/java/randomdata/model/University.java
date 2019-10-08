@@ -1,17 +1,11 @@
 package randomdata.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NonNull;
+
+@Data@AllArgsConstructor
 public class University {
+    @NonNull
     private String university;
-
-    public String getUniversity() {
-        return university;
-    }
-
-    public void setUniversity(String university) {
-        this.university = university;
-    }
-
-    public University(String university) {
-        this.university = university;
-    }
 }

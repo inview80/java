@@ -1,9 +1,13 @@
 package randomdata;
 
+import com.alibaba.fastjson.JSON;
+import lombok.Data;
 import lombok.Setter;
 import randomdata.model.*;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
@@ -18,8 +22,8 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     private List<BookAttach> bookAttachList;
     private List<BookType> bookTypeList;
     private List<Province> provinceList;
-    private List<FamilyFirstName> familynameList;
-    private List<Publishment> publishmentList;
+    private List<FamilyFirstName> familyNameList;
+    private List<Publisher> publisherList;
     private List<University> universityList;
     private static RandomUtil instance;
 
@@ -32,10 +36,13 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
 
     private RandomUtil() {
         loadData();
+        var set = new HashSet<>(publisherList);
+        universityList.forEach(item -> set.add(new Publisher(item.getUniversity() + "出版社")));
+        publisherList = new ArrayList<>(set);
     }
 
     private void loadData() {
-        ExcelUtil eu=new ExcelUtil();
+        ExcelUtil eu = new ExcelUtil();
         var map = eu.readExcel();
         if (map == null || map.size() == 0) {
             throw new NullPointerException("读取数据文件错误。没找到randomData.xlsx文件。");
@@ -43,13 +50,13 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
         for (Object item : map.keySet()) {
             switch (item.toString()) {
                 case "出版社":
-                    publishmentList = (List<Publishment>) map.get(item.toString());
+                    publisherList = (List<Publisher>) map.get(item.toString());
                     break;
                 case "大学":
                     universityList = ((List<University>) map.get(item.toString()));
                     break;
                 case "姓":
-                    familynameList = ((List<FamilyFirstName>) map.get(item.toString()));
+                    familyNameList = ((List<FamilyFirstName>) map.get(item.toString()));
                     break;
                 case "书名附加":
                     bookAttachList = ((List<BookAttach>) map.get(item.toString()));
@@ -64,6 +71,9 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
                     break;
             }
         }
+        if (bookAttachList.isEmpty() || bookTypeList.isEmpty() || provinceList.isEmpty() || familyNameList.isEmpty() || publisherList.isEmpty() || universityList.isEmpty()) {
+            throw new NullPointerException("读配置文件错误，请检查数据文件。");
+        }
     }
 
     @Override
@@ -77,7 +87,8 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
                 townStr = cityTmp.getTown().get(random.nextInt(cityTmp.getTown().size()));
             }
         }
-        return proTmp.getProvinceName() + (cityTmp != null ? cityTmp.getCityName() : "") + (townStr!=null? townStr :"");
+        return proTmp.getProvinceName() + (cityTmp != null ? cityTmp.getCityName() : "") + (townStr != null ?
+                townStr : "");
     }
 
     @Override
@@ -122,5 +133,46 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     public String getBookTypeDetails() {
         BookType bt = bookTypeList.get(random.nextInt(bookTypeList.size()));
         return bt.getBookTypeName() + "," + bt.getDetailsList().get(random.nextInt(bt.getDetailsList().size()));
+    }
+
+    public String getPublisher() {
+        return publisherList.get(random.nextInt(publisherList.size())).getPublisher();
+    }
+
+    public String getChineseName() {
+        int num = random.nextInt(2) + 1;
+        String tmp = "";
+        for (int i = 0; i < num; i++) {
+            int hightPos, lowPos; // 定义高低位
+            //获取高位值
+            hightPos = (176 + Math.abs(random.nextInt(39)));
+            //获取低位值
+            lowPos = (161 + Math.abs(random.nextInt(93)));
+            byte[] b = new byte[2];
+            b[0] = (byte) (hightPos & 0xff);
+            b[1] = (byte) (lowPos & 0xff);
+            //转成中文
+            try {
+                tmp += new String(b, "gb2312");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        }
+        return tmp;
+    }
+
+    public String getFullChineseName() {
+        String tmp = familyNameList.get(random.nextInt(familyNameList.size())).getFamilyName();
+        tmp += getChineseName();
+        return tmp;
+    }
+
+    public void save(){
+        try(var outStream=new BufferedOutputStream(new FileOutputStream("Data.dat"))){
+            var tmp = JSON.toJSONString(instance);
+            outStream.write(tmp.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

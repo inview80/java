@@ -38,7 +38,7 @@ public class RandomUtilTest {
     @Test
     public void getBookType_Big() {
         List<String> tmp = getList(RandomUtil.getInstance()::getBookTypeSimple);
-        log.info("图书类型，全部：{}",tmp);
+        log.info("图书类型，简略：{}",tmp);
     }
 
 
@@ -52,7 +52,30 @@ public class RandomUtilTest {
 
     @Test
     public void getBookType_Small() {
-
+        List<String> tmp = getList(RandomUtil.getInstance()::getBookTypeDetails);
+        log.info("图书类型，详细：{}",tmp);
     }
-    
+
+    @Test
+    public void getPublishment() {
+        var tmp = getList(RandomUtil.getInstance()::getPublisher);
+        log.info("出版社：{}",tmp);
+    }
+
+    @Test
+    public  void getChineseName(){
+        var tmp = getList(RandomUtil.getInstance()::getChineseName);
+        log.info("名：{}",tmp);
+    }
+
+    @Test
+    public void getFullChineseName() {
+        var tmp = getList(RandomUtil.getInstance()::getFullChineseName);
+        log.info("姓名：{}",tmp);
+    }
+
+    @Test
+    public void save(){
+        RandomUtil.getInstance().save();
+    }
 }
