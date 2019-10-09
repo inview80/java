@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5109a490-b8fd-4a6a-9202-bf09234aea39" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/AbstractMyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/Province.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/RandomUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/RandomUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/BookAttach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/BookAttach.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/BookType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/BookType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/FamilyFirstName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/FamilyFirstName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/University.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/University.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/randomdata/RandomUtilTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/randomdata/RandomUtilTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="528">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -292,7 +273,7 @@
     <property name="LombokPluginIS_VAL_Enabled" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570588244224" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570588362852" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -439,7 +420,7 @@
       <workItem from="1568986504283" duration="597000" />
       <workItem from="1569832092830" duration="2242000" />
       <workItem from="1570233680345" duration="4199000" />
-      <workItem from="1570240481916" duration="35827000" />
+      <workItem from="1570240481916" duration="36488000" />
     </task>
     <task id="LOCAL-00001" summary="19-10-8 15：03">
       <created>1570518227213</created>
@@ -455,13 +436,17 @@
       <option name="project" value="LOCAL" />
       <updated>1570526622063</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="19-10-9 10：31">
+      <created>1570588299915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570588299915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RandomUtilTest_save - 2019.10.09 at 09h 53m 04s.xml">
-      <configuration name="RandomUtilTest.save" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RandomUtilTest_save - 2019.10.09 at 09h 58m 18s.xml">
       <configuration name="RandomUtilTest.save" configurationId="JUnit" />
     </history-entry>
@@ -489,9 +474,12 @@
     <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.09 at 10h 30m 07s.xml">
       <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RandomUtilTest - 2019.10.09 at 10h 30m 50s.xml">
+      <configuration name="RandomUtilTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52806000" />
+    <option name="totallyTimeSpent" value="53467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,7 +503,7 @@
       <window_info id="设计器" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32823366" />
-      <window_info active="true" anchor="bottom" x="40" y="587" width="1538" height="218" id="Run" order="2" visible="true" weight="0.32823366" />
+      <window_info anchor="bottom" x="40" y="587" width="1538" height="218" id="Run" order="2" weight="0.32823366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -548,7 +536,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="19-10-8 15：03" />
     <MESSAGE value="：19-10-8 17：23" />
-    <option name="LAST_COMMIT_MESSAGE" value="：19-10-8 17：23" />
+    <MESSAGE value="19-10-9 10：31" />
+    <option name="LAST_COMMIT_MESSAGE" value="19-10-9 10：31" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -754,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="528">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
