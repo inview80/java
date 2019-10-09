@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ReadCsvUtil">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ReadCsvUtil/out/artifacts/ReadCsvUtil_jar/ReadCsvUtil.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
