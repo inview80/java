@@ -2,39 +2,33 @@ package randomdata;
 
 import com.alibaba.fastjson.JSON;
 import lombok.Data;
+import lombok.Getter;
 import lombok.Setter;
 import randomdata.model.*;
 
+import java.beans.Transient;
+import java.beans.XMLEncoder;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * @author inview
  * @date 2019-9-19
  * 工具类，可自动生成中文省、市、区地址，以及3、4个字的中文名，以及出版社名，书名
  */
-public class RandomUtil implements IGetCity, IGetBookAboat {
-    @Setter
+public class RandomUtil extends AbstractMyList implements IGetCity, IGetBookAboat, Serializable {
+    private static final long serialVersionUID = -3449408073979439084L;
     private Random random = new Random();
-    private List<BookAttach> bookAttachList;
-    private List<BookType> bookTypeList;
-    private List<Province> provinceList;
-    private List<FamilyFirstName> familyNameList;
-    private List<Publisher> publisherList;
-    private List<University> universityList;
     private static RandomUtil instance;
 
-    public static RandomUtil getInstance() {
+    public static RandomUtil getInstance()  {
         if (instance == null) {
             instance = new RandomUtil();
         }
         return instance;
     }
 
-    private RandomUtil() {
+    private RandomUtil()  {
         loadData();
         var set = new HashSet<>(publisherList);
         universityList.forEach(item -> set.add(new Publisher(item.getUniversity() + "出版社")));
@@ -77,6 +71,7 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     }
 
     @Override
+    @Transient
     public String getProvinceCityTownName() {
         Province proTmp = provinceList.get(random.nextInt(provinceList.size()));
         String townStr = null;
@@ -92,6 +87,7 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     }
 
     @Override
+    @Transient
     public List<String> getProvinceCityTownAll() {
         List<String> resultList = new ArrayList<>();
         for (Province pro : provinceList) {
@@ -107,6 +103,7 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     }
 
     @Override
+    @Transient
     public String getProvinceCityName() {
         int proNo = random.nextInt(provinceList.size());
         String proStr = provinceList.get(proNo).getProvinceName();
@@ -119,26 +116,31 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
     }
 
     @Override
+    @Transient
     public String getBookName() {
         String cityName = getProvinceCityTownName();
         return cityName + bookAttachList.get(random.nextInt(bookAttachList.size())).getBookAttachName();
     }
 
     @Override
+    @Transient
     public String getBookTypeSimple() {
         return bookTypeList.get(random.nextInt(bookTypeList.size())).getBookTypeName();
     }
 
     @Override
+    @Transient
     public String getBookTypeDetails() {
         BookType bt = bookTypeList.get(random.nextInt(bookTypeList.size()));
         return bt.getBookTypeName() + "," + bt.getDetailsList().get(random.nextInt(bt.getDetailsList().size()));
     }
 
+    @Transient
     public String getPublisher() {
         return publisherList.get(random.nextInt(publisherList.size())).getPublisher();
     }
 
+    @Transient
     public String getChineseName() {
         int num = random.nextInt(2) + 1;
         String tmp = "";
@@ -161,18 +163,10 @@ public class RandomUtil implements IGetCity, IGetBookAboat {
         return tmp;
     }
 
+    @Transient
     public String getFullChineseName() {
         String tmp = familyNameList.get(random.nextInt(familyNameList.size())).getFamilyName();
         tmp += getChineseName();
         return tmp;
-    }
-
-    public void save(){
-        try(var outStream=new BufferedOutputStream(new FileOutputStream("Data.dat"))){
-            var tmp = JSON.toJSONString(instance);
-            outStream.write(tmp.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

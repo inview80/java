@@ -3,6 +3,7 @@ package randomdata;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
@@ -11,32 +12,32 @@ import java.util.function.Supplier;
 public class RandomUtilTest {
     private final static int COUNT_NUMBER=50;
     @Test
-    public void getProvice_City_TownName() {
+    public void getProvice_City_TownName()  throws IOException{
         var tmp = getList(RandomUtil.getInstance()::getProvinceCityTownName);
         log.info("省、市、县：{}",tmp);
     }
 
     @Test
-    public void getProvice_City_Town_All() {
+    public void getProvice_City_Town_All() throws IOException {
         var tmp=RandomUtil.getInstance().getProvinceCityTownAll();
         log.info("所有省、市、县:{}",tmp);
         log.info("数量总计：{}",tmp.size());
     }
 
     @Test
-    public void getProvice_CityName() {
+    public void getProvice_CityName() throws IOException {
         var tmp = getList(RandomUtil.getInstance()::getProvinceCityName);
         log.info("省、市名:{}",tmp);
     }
 
     @Test
-    public void getBookName() {
+    public void getBookName() throws IOException {
         var tmp = getList(RandomUtil.getInstance()::getBookName);
         log.info("图书名称：{}",tmp);
     }
 
     @Test
-    public void getBookType_Big() {
+    public void getBookType_Big() throws IOException {
         List<String> tmp = getList(RandomUtil.getInstance()::getBookTypeSimple);
         log.info("图书类型，简略：{}",tmp);
     }
@@ -51,31 +52,26 @@ public class RandomUtilTest {
     }
 
     @Test
-    public void getBookType_Small() {
+    public void getBookType_Small()  throws IOException{
         List<String> tmp = getList(RandomUtil.getInstance()::getBookTypeDetails);
         log.info("图书类型，详细：{}",tmp);
     }
 
     @Test
-    public void getPublishment() {
+    public void getPublishment() throws IOException {
         var tmp = getList(RandomUtil.getInstance()::getPublisher);
         log.info("出版社：{}",tmp);
     }
 
     @Test
-    public  void getChineseName(){
+    public  void getChineseName() throws IOException{
         var tmp = getList(RandomUtil.getInstance()::getChineseName);
         log.info("名：{}",tmp);
     }
 
     @Test
-    public void getFullChineseName() {
+    public void getFullChineseName() throws IOException {
         var tmp = getList(RandomUtil.getInstance()::getFullChineseName);
         log.info("姓名：{}",tmp);
-    }
-
-    @Test
-    public void save(){
-        RandomUtil.getInstance().save();
     }
 }

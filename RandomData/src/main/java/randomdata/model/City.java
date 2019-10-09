@@ -12,7 +12,7 @@ public class City {
     private String cityName;
     private List<String> town = new ArrayList<>();
 
-    public City(@NonNull String[] city) {
+    public City( String[] city) {
         if (city != null && city.length > 0)
             this.cityName = city[0];
         if (city != null && city.length > 1) {

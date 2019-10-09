@@ -5,29 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5109a490-b8fd-4a6a-9202-bf09234aea39" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/AbstractMyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/Province.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/Publishment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/randomdata/model/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/randomdata/model/University.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/ExcelUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/ExcelUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/randomdata/RandomUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/RandomUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/BookAttach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/BookAttach.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/BookType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/BookType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/City.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/FamilyFirstName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/FamilyFirstName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/IGetBookAboat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/IGetBookAboat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/IGetCity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/IGetCity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/Provice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/Publishment.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/randomdata/model/University.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/randomdata/model/University.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/randomdata/RandomUtilTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/randomdata/RandomUtilTest.class" afterDir="false" />
     </list>
@@ -75,42 +70,45 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="173" column="33" lean-forward="true" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+            <state relative-caret-position="198">
+              <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#697#851#0" />
-                <element signature="e#768#820#1" />
-                <element signature="method#RandomUtil#0;class#RandomUtil#0" />
                 <element signature="e#1054#1135#1" />
                 <element signature="e#1177#2119#1" />
+                <element signature="e#1216#2109#0" />
+                <element signature="method#getProvinceCityTownName#0;class#RandomUtil#0" />
                 <element signature="e#1007#1287#1" />
                 <element signature="e#1171#1277#1" />
-                <element signature="method#getProvinceCityTownAll#0;class#RandomUtil#0" />
-                <element signature="e#1672#2052#1" />
                 <element signature="e#1719#2042#1" />
                 <element signature="e#1771#2028#1" />
                 <element signature="method#getProvinceCityName#0;class#RandomUtil#0" />
                 <element signature="e#2516#2680#1" />
                 <element signature="method#getBookName#0;class#RandomUtil#0" />
+                <element signature="method#getBookTypeSimple#0;class#RandomUtil#0" />
                 <element signature="method#getBookTypeDetails#0;class#RandomUtil#0" />
-                <element signature="e#5212#5213#0" expanded="true" />
+                <element signature="n#!!block;n#getPublisher#0;n#RandomUtil#0" />
+                <element signature="method#getChineseChar#0;class#RandomUtil#0" />
+                <element signature="e#5253#5280#1" />
+                <element signature="e#5781#5844#0" />
+                <element signature="e#5884#5936#0" />
+                <element signature="method#getFullChineseName#0;class#RandomUtil#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+            <state relative-caret-position="242">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2019#2020#0" expanded="true" />
-                <element signature="e#2044#2045#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,9 +128,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>private</find>
+      <find>protected</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
+      <replace>public</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -161,15 +161,16 @@
         <option value="$PROJECT_DIR$/src/main/java/randomdata/base/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/randomdata/model/Provice.java" />
         <option value="$PROJECT_DIR$/src/main/java/randomdata/model/Publishment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/City.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/University.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/Province.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java" />
-        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" />
         <option value="$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/Province.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/University.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/City.java" />
+        <option value="$PROJECT_DIR$/src/main/java/randomdata/model/AbstractMyList.java" />
         <option value="$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java" />
       </list>
@@ -291,7 +292,7 @@
     <property name="LombokPluginIS_VAL_Enabled" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570526590278" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570588244224" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -301,7 +302,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -331,8 +332,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RandomUtilTest.save">
-    <configuration name="RandomUtilTest.getBookType_Small" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RandomUtilTest">
+    <configuration name="RandomUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RandomData" />
       <extension name="coverage">
         <pattern>
@@ -342,8 +343,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="randomdata" />
       <option name="MAIN_CLASS_NAME" value="randomdata.RandomUtilTest" />
-      <option name="METHOD_NAME" value="getBookType_Small" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -380,7 +379,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomUtilTest.getPublishment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RandomUtilTest.readConfig" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RandomData" />
       <extension name="coverage">
         <pattern>
@@ -390,7 +389,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="randomdata" />
       <option name="MAIN_CLASS_NAME" value="randomdata.RandomUtilTest" />
-      <option name="METHOD_NAME" value="getPublishment" />
+      <option name="METHOD_NAME" value="readConfig" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -414,11 +413,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RandomUtilTest.save" />
+        <item itemvalue="JUnit.RandomUtilTest" />
         <item itemvalue="JUnit.RandomUtilTest.getFullChineseName" />
+        <item itemvalue="JUnit.RandomUtilTest.readConfig" />
+        <item itemvalue="JUnit.RandomUtilTest.save" />
         <item itemvalue="JUnit.RandomUtilTest.getChineseName" />
-        <item itemvalue="JUnit.RandomUtilTest.getBookType_Small" />
-        <item itemvalue="JUnit.RandomUtilTest.getPublishment" />
       </list>
     </recent_temporary>
   </component>
@@ -440,7 +439,7 @@
       <workItem from="1568986504283" duration="597000" />
       <workItem from="1569832092830" duration="2242000" />
       <workItem from="1570233680345" duration="4199000" />
-      <workItem from="1570240481916" duration="27351000" />
+      <workItem from="1570240481916" duration="35827000" />
     </task>
     <task id="LOCAL-00001" summary="19-10-8 15：03">
       <created>1570518227213</created>
@@ -449,43 +448,50 @@
       <option name="project" value="LOCAL" />
       <updated>1570518227213</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="：19-10-8 17：23">
+      <created>1570526622063</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570526622063</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RandomUtilTest_getBookType_Small - 2019.10.08 at 16h 07m 02s.xml">
-      <configuration name="RandomUtilTest.getBookType_Small" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getChineseName - 2019.10.08 at 16h 30m 08s.xml">
-      <configuration name="RandomUtilTest.getChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getChineseName - 2019.10.08 at 16h 30m 44s.xml">
-      <configuration name="RandomUtilTest.getChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getChineseName - 2019.10.08 at 16h 45m 07s.xml">
-      <configuration name="RandomUtilTest.getChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getChineseName - 2019.10.08 at 16h 45m 26s.xml">
-      <configuration name="RandomUtilTest.getChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getChineseName - 2019.10.08 at 16h 48m 05s.xml">
-      <configuration name="RandomUtilTest.getChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getChineseName - 2019.10.08 at 16h 48m 42s.xml">
-      <configuration name="RandomUtilTest.getChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.08 at 16h 49m 56s.xml">
-      <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.08 at 16h 50m 19s.xml">
-      <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_save - 2019.10.08 at 17h 18m 19s.xml">
+    <history-entry file="RandomUtilTest_save - 2019.10.09 at 09h 53m 04s.xml">
       <configuration name="RandomUtilTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_save - 2019.10.09 at 09h 58m 18s.xml">
+      <configuration name="RandomUtilTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_save - 2019.10.09 at 10h 00m 33s.xml">
+      <configuration name="RandomUtilTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_save - 2019.10.09 at 10h 10m 08s.xml">
+      <configuration name="RandomUtilTest.save" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_readConfig - 2019.10.09 at 10h 10m 52s.xml">
+      <configuration name="RandomUtilTest.readConfig" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_readConfig - 2019.10.09 at 10h 11m 56s.xml">
+      <configuration name="RandomUtilTest.readConfig" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_readConfig - 2019.10.09 at 10h 13m 33s.xml">
+      <configuration name="RandomUtilTest.readConfig" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.09 at 10h 25m 53s.xml">
+      <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_readConfig - 2019.10.09 at 10h 28m 04s.xml">
+      <configuration name="RandomUtilTest.readConfig" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.09 at 10h 30m 07s.xml">
+      <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44330000" />
+    <option name="totallyTimeSpent" value="52806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,7 +547,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="19-10-8 15：03" />
-    <option name="LAST_COMMIT_MESSAGE" value="19-10-8 15：03" />
+    <MESSAGE value="：19-10-8 17：23" />
+    <option name="LAST_COMMIT_MESSAGE" value="：19-10-8 17：23" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -571,13 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/AbstractMyList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="10" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -621,70 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/University.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/Province.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="docComment;class#Province#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/City.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/ExcelUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -712,39 +648,116 @@
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/BookAttach.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        <state relative-caret-position="169">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="e#2044#2045#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/BookType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/Province.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;class#Province#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/FamilyFirstName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/Publisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/model/AbstractMyList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/randomdata/RandomUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="173" column="33" lean-forward="true" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+        <state relative-caret-position="198">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#697#851#0" />
-            <element signature="e#768#820#1" />
-            <element signature="method#RandomUtil#0;class#RandomUtil#0" />
             <element signature="e#1054#1135#1" />
             <element signature="e#1177#2119#1" />
+            <element signature="e#1216#2109#0" />
+            <element signature="method#getProvinceCityTownName#0;class#RandomUtil#0" />
             <element signature="e#1007#1287#1" />
             <element signature="e#1171#1277#1" />
-            <element signature="method#getProvinceCityTownAll#0;class#RandomUtil#0" />
-            <element signature="e#1672#2052#1" />
             <element signature="e#1719#2042#1" />
             <element signature="e#1771#2028#1" />
             <element signature="method#getProvinceCityName#0;class#RandomUtil#0" />
             <element signature="e#2516#2680#1" />
             <element signature="method#getBookName#0;class#RandomUtil#0" />
+            <element signature="method#getBookTypeSimple#0;class#RandomUtil#0" />
             <element signature="method#getBookTypeDetails#0;class#RandomUtil#0" />
-            <element signature="e#5212#5213#0" expanded="true" />
+            <element signature="n#!!block;n#getPublisher#0;n#RandomUtil#0" />
+            <element signature="method#getChineseChar#0;class#RandomUtil#0" />
+            <element signature="e#5253#5280#1" />
+            <element signature="e#5781#5844#0" />
+            <element signature="e#5884#5936#0" />
+            <element signature="method#getFullChineseName#0;class#RandomUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/randomdata/RandomUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
