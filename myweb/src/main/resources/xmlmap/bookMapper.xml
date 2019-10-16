@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.mystaic.myweb.mapper.BookMapper">
+    <insert id="add" parameterType="boot.mystaic.myweb.pojo.Book" keyProperty="bookid">
+        insert into book (bookid, bookName, booktypeid, publishment, publishDate, author, price, userCode, BorrowDate)
+        values (#{bookID,jdbcType=CHAR}, #{bookName,jdbcType=VARCHAR}, #{bookTypeID,jdbcType=SMALLINT},
+                #{publishment,jdbcType=VARCHAR}, #{publishDate,jdbcType=DATE}, #{author,jdbcType=VARCHAR},
+                #{price,jdbcType=DECIMAL}, #{userCode,jdbcType=CHAR}, #{borrowDate,jdbcType=DATE})
+    </insert>
+
+    <select id="getAll" resultType="boot.mystaic.myweb.pojo.Book">
+        select *
+        from book
+    </select>
+
+    <select id="findBooks" resultType="boot.mystaic.myweb.pojo.Book" parameterType="boot.mystaic.myweb.pojo.Book">
+        select * from book
+        <where>
+            <if test="bookName !=null">
+                bookName like "%"#{bookName}"%"
+            </if>
+            <if test="publishment !=null">
+                publishment like "%"#{publishment}"%"
+            </if>
+        </where>
+    </select>
+</mapper>
