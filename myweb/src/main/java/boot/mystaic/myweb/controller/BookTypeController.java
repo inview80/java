@@ -5,11 +5,14 @@ import boot.mystaic.myweb.service.BookTypeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
+import java.util.List;
 import java.util.Random;
 
 @Slf4j
@@ -20,34 +23,34 @@ public class BookTypeController {
 
     @RequestMapping("/")
     @ResponseBody
-    public ModelAndView getAll(){
-        var mv = new ModelAndView("bookType");
+    public List<BookType> getAll(){
         var tt=bookTypeService.getAll();
         log.info("1111:{}", tt);
-        mv.addObject("bookTypes", tt);
-        return mv;
+        return tt;
     }
 
-    @RequestMapping("/all")
-    public ModelAndView getAll2(){
-        var mv = new ModelAndView("bookType");
-        var tt=bookTypeService.getAll();
-        log.info("jjjj:{}", tt);
-        mv.setView(new MappingJackson2JsonView());
-        mv.addObject("bookTypes", tt);
-        return mv;
-    }
 
     @RequestMapping("/h")
     public String hello(){
-        log.info("hello");
-        return "hello";
+        log.info("page/booktype/showBookType");
+        return "page/booktype/showBookType";
     }
 
-    @RequestMapping("/add")
-    public int add(){
-        Random random=new Random();
-        var bt = new BookType(random.nextInt(), "jjjjj" + random.nextInt(1000));
-        return bookTypeService.add(bt);
+    @GetMapping("add")
+    public String add(){
+        return "/booktype/addBookType";
+    }
+    @RequestMapping("/insert")
+    @ResponseBody
+    public BookType add(@RequestBody BookType bt){
+        log.info("{}",bt);
+        if (bt.getBookTypeID() != 0 && bt.getBookTypeName() != null && !bt.getBookTypeName().isBlank()) {
+            if (bookTypeService.add(bt)>0) {
+                log.info("成功");
+                return bt;
+            }
+        }
+        log.info("null");
+        return new BookType(0, "");
     }
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示图书类型</title>
+    <script src="webjars/jquery-easyui/1.5.21/js/jquery.easyui.min.js"></script>
+    <script src="webjars/jquery-easyui/1.5.21/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="webjars/jquery-easyui/1.5.21/css/easyui.css">
+</head>
+<body>
+<div>
+    <input value="刷新" onclick="readData()" type="button">
+    <div>
+        <table id="tableP" border="1" class="datagrid-view">
+            <thead>
+            <tr>
+                <th width="80">编号</th>
+                <th width="150">名称</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <hr/>
+    <label id="show_time" content="gfg"/>
+</div>
+</body>
+<script>
+    //这里就一句话就可以显示时间，但不是我想要的最理想结果
+    $("#show_time").content = new Date().toString();
+    // setInterval("$(\"#show_time\").innerText=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+</script>
+<script>
+    function readData() {
+        var showData = function (data) {
+            console.log("接收到数据，填充表格");
+            var str = "";
+            var tb = $("#tableP");
+            console.log("找到table");
+            $("#tableP tbody").html('');
+
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                str = "<tr><td>" + data[i].bookTypeID + "</td><td>" + data[i].bookTypeName + "</td></tr>";
+                tb.append(str);
+            }
+        };
+
+        console.log("开始发送提交信息");
+        $.ajax({
+            url: "/",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                /*这个方法里是ajax发送请求成功之后执行的代码*/
+                showData(data);//我们仅做数据展示
+            },
+            error: function (msg) {
+                alert("ajax连接异常：" + msg);
+            }
+        });
+    }
+
+    $(document).ready(readData());
+</script>
+</html>

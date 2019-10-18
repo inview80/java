@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示图书详情</title>
+    <script src="webjars/jquery-easyui/1.5.21/js/jquery.easyui.min.js"></script>
+    <script src="webjars/jquery-easyui/1.5.21/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"  href="@{/static/webjars/jquery-easyui/1.5.21/css/easyui.css}">
+</head>
+<body>
+<div class="layout-panel-east">
+    <form id="searchForm" method="post">
+        <table>
+            <tr>
+                <td>图书名称</td>
+                <td>
+                    <input id="bookName" name="bookName" class="textbox-text" datasrc="datasrc" datatype="datatype"
+                           datafld="prompt:'输入图书名称：'"
+                           style="width: 100%;height: 32px">
+                </td>
+                <td>出版社</td>
+                <td>
+                    <input id="publishment" name="publishment" class="textbox-text">
+                </td>
+                <td>
+                    <a href="#" class="searchbox-button" style="width: 80px" onclick="readData()">查询</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="tableP">
+        <table id="dg" class="datagrid" border="1">
+            <thead>
+            <tr>
+                <th width="80">编号</th>
+                <th width="150">名称</th>
+                <th>类名</th>
+                <th>出版社</th>
+                <th>出版时间</th>
+                <th>作者</th>
+                <th>价格</th>
+                <th>用户编号</th>
+                <th>出借时间</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<hr/>
+</body>
+<script>
+    function showData() {
+        console.log("接收到数据，填充表格");
+        var pros="bookID,bookName,bookTypeID,publishment,publishDate,author,price userCode,borrowDate".split(',');
+        var str = "";
+        var tb = $("#dg");
+        console.log("找到table");
+        $("#dg tbody").html('');
+
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            tb.append("<tr>");
+            for (var tmp in pros) {
+                str ="<td>"+tmp+"</td>";
+                tb.append(str);
+            }
+            tb.append("</tr>");
+            // str = "<tr><td>" + data[i].bookTypeID + "</td><td>" + data[i].bookTypeName + "</td></tr>";
+        }
+    }
+
+    function readData() {
+        console.log("开始发送提交信息");
+        $.ajax({
+            url: "/book/list",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                /*这个方法里是ajax发送请求成功之后执行的代码*/
+                showData(data);//我们仅做数据展示
+            },
+            error: function (msg) {
+                alert("ajax连接异常：" + msg);
+            }
+        });
+    }
+
+    $(document).ready(readData());
+</script>
+</html>

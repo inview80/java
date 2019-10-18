@@ -25,19 +25,20 @@ public class BookController {
     private BookService bookService;
 
     @RequestMapping("/")
-    public ModelAndView getAll() {
-        var mv = new ModelAndView("book");
-//        mv.setView(new MappingJackson2JsonView());
-        mv.addObject("bookList", bookService.getAll());
-        return mv;
+    public String getAll() {
+        return "/page/book/showbook";
+//        var mv = new ModelAndView("book");
+////        mv.setView(new MappingJackson2JsonView());
+//        mv.addObject("bookList", bookService.getAll());
+//        return mv;
     }
-
+    //@RequestParam(value = "bookName",required = false)String bookName,@RequestParam(value = "publishment",required = false)String publishment
     @RequestMapping("/list")
     @ResponseBody
-    public List<Book> list(@RequestParam(value = "bookName",required = false)String bookName,@RequestParam(value = "publishment",required = false)String publishment){
+    public List<Book> list(){
         var book=new Book();
-        book.setBookName(bookName);
-        book.setPublishment(publishment);
+//        book.setBookName(bookName);
+//        book.setPublishment(publishment);
         List<Book> tmp=bookService.findBooks(book);
         log.info("{}", tmp);
         return tmp;

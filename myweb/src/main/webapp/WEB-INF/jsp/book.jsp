@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Date" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2019/10/16
@@ -10,12 +10,13 @@
 
 <html>
 <head>
+    <c:set var="base" value="${pageContext.request.contextPath}"/>
     <title>Title</title>
-    <script src="webjars/jquery-easyui/1.5.21/js/jquery.easyui.min.js"></script>
-    <%--<script src="webjars/js/jquery.easyui.min.js"></script>--%>
-    <%--<script src="https://code.jquery.com/jquery-3.2.0.js"></script>--%>
-    <script src="webjars/jquery/3.4.1/src/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="webjars/css/easyui.css">
+    <script src="${base}/webjars/jquery/1.11.1/jquery.min.js"></script>
+    <%--<script src="http_code.jquery.com_jquery-3.2.0.js"></script>--%>
+    <%--<script src="jquery.min.js"></script>--%>
+    <script src="${base}webjars/jquery-easyui/1.5.21/js/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/webjars/jquery-easyui/1.5.21/css/easyui.css">
 </head>
 <body>
 <div class="layout-panel-east">
@@ -24,7 +25,7 @@
             <tr>
                 <td>图书名称</td>
                 <td>
-                    <input id="bookName" name="bookName" class="textbox-text" datafld="prompt:'输入图书名称：'"
+                    <input id="bookName"  name="bookName" class="textbox-text"datasrc="datasrc" datatype="datatype" datafld="prompt:'输入图书名称：'"
                            style="width: 100%;height: 32px">
                 </td>
                 <td>出版社</td>
@@ -70,6 +71,8 @@
         </table>
     </div>
 </div>
+<hr/>
+<%=new Date()%>
 </body>
 <script>
     function onSearch() {
