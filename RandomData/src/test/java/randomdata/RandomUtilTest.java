@@ -5,12 +5,14 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class RandomUtilTest {
-    private final static int COUNT_NUMBER=50;
+    private final static int COUNT_NUMBER=50000;
     @Test
     public void getProvice_City_TownName()  throws IOException{
         var tmp = getList(RandomUtil.getInstance()::getProvinceCityTownName);
@@ -44,11 +46,11 @@ public class RandomUtilTest {
 
 
     private List<String> getList(Supplier<String> action) {
-        var tmp = new ArrayList<String>(COUNT_NUMBER);
+        var tmp = new HashSet<String> (COUNT_NUMBER);
         for (int i = 0; i < COUNT_NUMBER; i++) {
             tmp.add(action.get());
         }
-        return tmp;
+        return new ArrayList<>(tmp);
     }
 
     @Test

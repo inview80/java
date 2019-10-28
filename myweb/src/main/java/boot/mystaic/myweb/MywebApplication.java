@@ -34,9 +34,9 @@ public class MywebApplication extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/user/**")
-                .hasAnyRole(PowerEnum.ADMINISTER.toString(), PowerEnum.EMPLOYEE.toString())
+                .hasAnyRole(PowerEnum.ADMINISTER.getName(), PowerEnum.EMPLOYEE.getName())
                 .antMatchers("/book/**")
-                .hasAnyRole(PowerEnum.GENERAL.toString())
+                .hasAnyRole(PowerEnum.GENERAL.getName())
                 .and().anonymous()
                 .and().formLogin()
                 .and().httpBasic();
