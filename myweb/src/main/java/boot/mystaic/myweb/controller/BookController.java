@@ -2,19 +2,17 @@ package boot.mystaic.myweb.controller;
 
 import boot.mystaic.myweb.pojo.Book;
 import boot.mystaic.myweb.service.BookService;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 @Slf4j
@@ -26,19 +24,24 @@ public class BookController {
 
     @RequestMapping("/")
     public String getAll() {
-        return "/page/book/showbook";
-//        var mv = new ModelAndView("book");
-////        mv.setView(new MappingJackson2JsonView());
-//        mv.addObject("bookList", bookService.getAll());
-//        return mv;
+        return "page/book/showbook";
     }
-    //@RequestParam(value = "bookName",required = false)String bookName,@RequestParam(value = "publishment",required = false)String publishment
+    @RequestMapping("/a")
+    public String getAll2(){return "page/book/show2";}
+
+    @RequestMapping("/list2")
+    @ResponseBody
+    public List<Book> list2(){
+        return bookService.findBooks(new Book());
+    }
+
     @RequestMapping("/list")
     @ResponseBody
-    public List<Book> list(){
+    public List<Book> list(@RequestParam(value = "bookName",required = false)String bookName, @RequestParam(value = "publishment",required = false)String publishment){
         var book=new Book();
-//        book.setBookName(bookName);
-//        book.setPublishment(publishment);
+        Optional.ofNullable(bookName).ifPresent(val -> book.setBookName(val.trim()));
+        Optional.ofNullable(publishment).ifPresent(val -> book.setPublishment(val.trim()));
+        log.info("{}",book);
         List<Book> tmp=bookService.findBooks(book);
         log.info("{}", tmp);
         return tmp;

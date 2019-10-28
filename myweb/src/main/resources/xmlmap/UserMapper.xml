@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.mystaic.myweb.mapper.UserMapper">
+    <insert id="addUser" parameterType="boot.mystaic.myweb.pojo.User">
+        insert  into user(usercode, username, password, permissionid, createdate) values (#{userCode,jdbcType=CHAR},#{userName,jdbcType=VARCHAR},#{password,jdbcType=CHAR},#{powerDetails,jdbcType=SMALLINT},#{createDate,jdbcType=DATE})
+    </insert>
+    <!--<insert id="add" parameterType="boot.mystaic.myweb.pojo.Book" keyProperty="bookid">-->
+        <!--insert into book (bookid, bookName, booktypeid, publishment, publishDate, author, price, userCode, BorrowDate)-->
+        <!--values (#{bookID,jdbcType=CHAR}, #{bookName,jdbcType=VARCHAR}, #{bookTypeID,jdbcType=SMALLINT},-->
+                <!--#{publishment,jdbcType=VARCHAR}, #{publishDate,jdbcType=DATE}, #{author,jdbcType=VARCHAR},-->
+                <!--#{price,jdbcType=DECIMAL}, #{userCode,jdbcType=CHAR}, #{borrowDate,jdbcType=DATE})-->
+    <!--</insert>-->
+
+    <select id="getUserById" resultType="boot.mystaic.myweb.pojo.User" parameterType="string">
+        select UserCode ,UserName,Password,PermissionID as powerDetails,CreateDate from user where UserCode=#{userID}
+    </select>
+    <select id="getUserByName" resultType="boot.mystaic.myweb.pojo.User" parameterType="string">select UserCode ,UserName,Password,PermissionID as powerDetails,CreateDate from user where userName =#{userName}
+    </select>
+    <select id="getAll" resultType="boot.mystaic.myweb.pojo.User">
+        select userCode ,userName,password,PermissionID as powerDetails,createDate from user
+    </select>
+</mapper>

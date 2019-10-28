@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="/webjars/bootstrap-table/1.9.1-1/bootstrap-table.min.js"></script>-->
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <!--<link rel="stylesheet" href="/webjars/bootstrap-table/1.9.1-1/bootstrap-table.min.css">-->
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+    <title>Title</title>
+</head>
+<body>
+<h2>DataGrid Selection</h2>
+<p>Choose a selection mode and select one or more rows.</p>
+<div style="margin:20px 0;">
+    <a href="#" style="background: yellow" class="btn-link" onclick="getSelected()">GetSelected</a>
+    <button onclick="showSelect()">选择</button>
+</div>
+<hr/>
+<table id="dg" class="table-striped"></table>
+</body>
+<script type="text/javascript">
+    function getSelected() {
+        $("#dg").bootstrapTable({
+            url: "/book/list",
+            type: "post",
+            clickToSelect: true,//是否启用点击选中行
+            showRefresh: true,                  //是否显示刷新按钮
+            pagination: true,                   //是否显示分页（*）
+            striped: true,                      //是否显示行间隔色
+            queryParams: {bookName: "", publishment: ""},
+            onDblClickRow: function (row, $element) {
+                var id = row.bookID;
+                alert(id);
+            },
+            columns: [{
+                checkbox: true,
+                visible: true                  //是否显示复选框
+            }, {
+                field: 'bookID', title: '编号', width: 40
+            }, {
+                field: 'bookName', title: '名称', width: 200
+            }, {
+                field: 'bookTypeID', title: '类型ID'
+            }, {
+                field: 'publishment', title: '出版社'
+            }, {
+                field: 'publishDate', title: '出版时间', formatter: dateFormat
+            }, {
+                field: 'price', title: '价格'
+            }, {
+                field: 'userCode', title: '用户ID'
+            }, {
+                field: 'borrowDate', title: '出版时间', formatter: dateFormat
+            },]
+        });
+    }
+
+    function dateFormat(value, row, index) {
+        var date = new Date(value);
+        return value.substring(0, 10);
+    }
+    function showSelect() {
+        alert("选中");
+        var rows = $("#dg").bootstrapTable('getSelections');
+        alert(rows);
+        if (rows.length > 0) {
+            alert( rows[0].borrowDate);
+        }
+    }
+</script>
+</html>

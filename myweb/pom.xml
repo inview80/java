@@ -34,9 +34,21 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <!--<scope>runtime</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.0.3</version>
         </dependency>
 
         <dependency>
@@ -44,29 +56,40 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.webjars</groupId>-->
-            <!--<artifactId>bootstrap</artifactId>-->
-            <!--<version>3.3.5</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap-table</artifactId>
+            <version>1.9.1-1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>2.1.9.RELEASE</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
 
         <!--<dependency>-->
-            <!--<groupId>org.webjars.bower</groupId>-->
-            <!--<artifactId>jquery</artifactId>-->
-            <!--<version>3.4.1</version>-->
+            <!--<groupId>org.webjars</groupId>-->
+            <!--<artifactId>jquery-ui</artifactId>-->
+            <!--<version>1.12.1</version>-->
         <!--</dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.webjars.npm/jquery-easyui -->
-        <dependency>
-            <groupId>org.webjars.npm</groupId>
-            <artifactId>jquery-easyui</artifactId>
-            <version>1.5.21</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
         <!--<dependency>-->
             <!--<groupId>javax.servlet</groupId>-->
             <!--<artifactId>jstl</artifactId>-->
             <!--<version>1.2</version>-->
         <!--</dependency>-->
+
         <!--用于编译jsp -->
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
         <!--<dependency>-->

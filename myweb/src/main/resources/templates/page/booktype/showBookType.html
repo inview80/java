@@ -3,32 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>显示图书类型</title>
-    <script src="webjars/jquery-easyui/1.5.21/js/jquery.easyui.min.js"></script>
-    <script src="webjars/jquery-easyui/1.5.21/js/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="webjars/jquery-easyui/1.5.21/css/easyui.css">
+    <script src="/jquery-easyui/jquery.min.js"></script>
+    <script src="/jquery-easyui/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" href="/jquery-easyui/themes/default/easyui.css">
 </head>
 <body>
 <div>
     <input value="刷新" onclick="readData()" type="button">
     <div>
-        <table id="tableP" border="1" class="datagrid-view">
-            <thead>
+        <table id="tableP" class="datagrid-view">
+            <thead class="datagrid-header">
             <tr>
                 <th width="80">编号</th>
                 <th width="150">名称</th>
             </tr>
             </thead>
+            <tbody class="datagrid-body"></tbody>
         </table>
     </div>
     <hr/>
-    <label id="show_time" content="gfg"/>
+    <p id="show_time" >aaaa</p>
 </div>
 </body>
-<script>
-    //这里就一句话就可以显示时间，但不是我想要的最理想结果
-    $("#show_time").content = new Date().toString();
-    // setInterval("$(\"#show_time\").innerText=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
-</script>
 <script>
     function readData() {
         var showData = function (data) {
@@ -60,6 +56,11 @@
         });
     }
 
-    $(document).ready(readData());
+    $(document).ready(function(){
+        //这里就一句话就可以显示时间，但不是我想要的最理想结果
+        $("#show_time").html(new Date().toLocaleDateString().replace(/\//g,'-'));
+        // setInterval("$(\"#show_time\").innerText=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+        readData();
+    } );
 </script>
 </html>

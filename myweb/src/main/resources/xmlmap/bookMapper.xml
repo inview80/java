@@ -16,11 +16,11 @@
     <select id="findBooks" resultType="boot.mystaic.myweb.pojo.Book" parameterType="boot.mystaic.myweb.pojo.Book">
         select * from book
         <where>
-            <if test="bookName !=null">
+            <if test="bookName !=null and bookName!=''">
                 bookName like "%"#{bookName}"%"
             </if>
-            <if test="publishment !=null">
-                publishment like "%"#{publishment}"%"
+            <if test="publishment !=null and publishment!=''">
+               and publishment like "%"#{publishment}"%"
             </if>
         </where>
     </select>

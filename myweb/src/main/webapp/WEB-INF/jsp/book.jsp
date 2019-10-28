@@ -6,17 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
 <head>
-    <c:set var="base" value="${pageContext.request.contextPath}"/>
     <title>Title</title>
-    <script src="${base}/webjars/jquery/1.11.1/jquery.min.js"></script>
-    <%--<script src="http_code.jquery.com_jquery-3.2.0.js"></script>--%>
-    <%--<script src="jquery.min.js"></script>--%>
-    <script src="${base}webjars/jquery-easyui/1.5.21/js/jquery.easyui.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/webjars/jquery-easyui/1.5.21/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui/themes/default/easyui.css">
+    <script src="jquery-easyui/jquery.min.js"></script>
+<%--<script src="http_code.jquery.com_jquery-3.2.0.js"></script>--%>
+<%--<script src="jquery.min.js"></script>--%>
+    <script src="jquery-easyui/jquery.easyui.min.js"></script>
 </head>
 <body>
 <div class="layout-panel-east">
@@ -39,7 +37,7 @@
         </table>
     </form>
     <div id="tableP">
-        <table id="dg" class="datagrid" border="1">
+        <table id="dg" class="datagrid" border="1" >
             <thead>
             <tr>
                 <th width="80">编号</th>
@@ -53,21 +51,19 @@
                 <th>出借时间</th>
             </tr>
             </thead>
-            <tbody>
-            <c:forEach items="${bookList}" var="books">
-                <tr>
-                    <td>${books.bookID}</td>
-                    <td>${books.bookName}</td>
-                    <td>${books.bookTypeID}</td>
-                    <td>${books.publishment}</td>
-                    <td>${books.publishDate.toLocaleString()}</td>
-                    <td>${books.author}</td>
-                    <td>${books.price}</td>
-                    <td>${books.userCode}</td>
-                    <td>${books.borrowDate.toLocaleString()}</td>
-                </tr>
-            </c:forEach>
-            </tbody>
+            <%--<tbody>--%>
+                <%--<tr>--%>
+                    <%--<td>${books.bookID}</td>--%>
+                    <%--<td>${books.bookName}</td>--%>
+                    <%--<td>${books.bookTypeID}</td>--%>
+                    <%--<td>${books.publishment}</td>--%>
+                    <%--<td>${books.publishDate.toLocaleString()}</td>--%>
+                    <%--<td>${books.author}</td>--%>
+                    <%--<td>${books.price}</td>--%>
+                    <%--<td>${books.userCode}</td>--%>
+                    <%--<td>${books.borrowDate.toLocaleString()}</td>--%>
+                <%--</tr>--%>
+            <%--</tbody>--%>
         </table>
     </div>
 </div>
