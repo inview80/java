@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>显示所有用户</title>
+    <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webjars/bootstrap-table/1.9.1-1/bootstrap-table.min.css">
+</head>
+<body>
+<div>
+<!--    <span style="margin:0 auto;font-size: 26px" th:text="${refresh}"></span>-->
+    <button onClick="flush()">点击刷新表格</button>
+</div>
+<div id="table_refresh" style="text-align: center;margin:0 auto;width: 900px" th:fragment="table_refresh">
+<table class="table-striped" th:border="1">
+    <thead class="column-header">
+    <tr>
+        <th><input type="checkbox" id="checkbox_all"></th>
+        <th th:width="80">编号</th>
+        <th th:width="180">用户名</th>
+        <th th:width="10%">密码</th>
+        <th>权限</th>
+        <th>创建日期</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user:${users}">
+        <td><input type="checkbox" class="checkbox"></td>
+        <td th:text="${user.userCode}"/>
+        <td th:text="${user.userName}"/>
+        <td th:text="${user.password}"/>
+        <td th:text="${user.powerDetails}"/>
+        <td th:text="${#dates.format(user.createDate, 'yyyy-mm-dd')}"/>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+<script>
+    function flush() {
+        $("#table_refresh").load("/user/allUser");
+        console.info("发送请求,成功");
+    }
+</script>
+</html>

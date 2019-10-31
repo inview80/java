@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>显示图书类型</title>
-    <script src="/jquery-easyui/jquery.min.js"></script>
-    <script src="/jquery-easyui/jquery.easyui.min.js"></script>
-    <link rel="stylesheet" href="/jquery-easyui/themes/default/easyui.css">
+    <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap-table/1.9.1-1/bootstrap-table.min.css">
 </head>
 <body>
 <div>
@@ -22,7 +21,7 @@
         </table>
     </div>
     <hr/>
-    <p id="show_time" >aaaa</p>
+    <p id="show_time">aaaa</p>
 </div>
 </body>
 <script>
@@ -43,9 +42,13 @@
 
         console.log("开始发送提交信息");
         $.ajax({
-            url: "/",
-            type: "post",
+            url: "/booktype/getTypeList",
+            type: "get",
             dataType: "json",
+            data: {
+                // csrfmiddlewaretoken: '{{ csrf_token }}'
+                //其他的数据
+            },
             success: function (data) {
                 /*这个方法里是ajax发送请求成功之后执行的代码*/
                 showData(data);//我们仅做数据展示
@@ -56,11 +59,11 @@
         });
     }
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         //这里就一句话就可以显示时间，但不是我想要的最理想结果
-        $("#show_time").html(new Date().toLocaleDateString().replace(/\//g,'-'));
+        $("#show_time").html(new Date().toLocaleDateString().replace(/\//g, '-'));
         // setInterval("$(\"#show_time\").innerText=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
         readData();
-    } );
+    });
 </script>
 </html>

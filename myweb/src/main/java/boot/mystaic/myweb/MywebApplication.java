@@ -1,7 +1,6 @@
 package boot.mystaic.myweb;
 
 import boot.mystaic.myweb.mapper.BookTypeMapper;
-import boot.mystaic.myweb.secret.PowerEnum;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,12 +32,22 @@ public class MywebApplication extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/user/**")
-                .hasAnyRole(PowerEnum.ADMINISTER.getName(), PowerEnum.EMPLOYEE.getName())
-                .antMatchers("/book/**")
-                .hasAnyRole(PowerEnum.GENERAL.getName())
-                .and().anonymous()
-                .and().formLogin()
-                .and().httpBasic();
+        http.csrf().disable().anonymous();
+//        http.csrf().disable();
+//        http.authorizeRequests()
+//                //user只允许ADMINISTER访问
+//                .antMatchers("/user/**")
+//                .hasAuthority(PowerEnum.ADMINISTER.toString())
+//                //booktype允许ADMINISTER、EMPLOYEE访问
+//                .antMatchers("/booktype/**")
+//                .hasAnyAuthority(PowerEnum.ADMINISTER.toString(),PowerEnum.EMPLOYEE.toString())
+//                //book允许所有用户访问
+//                .antMatchers("/book/**")
+//                .hasAnyAuthority(PowerEnum.GENERAL.toString(),PowerEnum.ADMINISTER.toString(),PowerEnum.EMPLOYEE.toString())
+//                .anyRequest().authenticated()
+//                .and().formLogin()
+//                //设置退出登录页面和默认跳转页面
+//                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/welcome")
+//                .and().httpBasic();
     }
 }

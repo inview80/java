@@ -24,8 +24,9 @@ public class BookController {
 
     @RequestMapping("/")
     public String getAll() {
-        return "page/book/showbook";
+        return "page/book/showBook";
     }
+
     @RequestMapping("/a")
     public String getAll2(){return "page/book/show2";}
 

@@ -18,11 +18,11 @@ spring:
       name: user
       password: user
       roles: admin
-  main:
-    banner-mode: off
+#  main:
+#    banner-mode: off
 
 mybatis:
-  mapper-locations: classpath:xmlmap/*Mapper.xml
+#  mapper-locations: classpath:xmlmap/*Mapper.xml
   type-aliases-package: boot.mystaic.myweb.pojo
   type-handlers-package: boot.mystaic.myweb.secret
 
@@ -30,3 +30,4 @@ system:
   user:
     password:
       secret: inview
+

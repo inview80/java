@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BookTypeService {
+public class BookTypeService implements BookTypeMapper{
     @Autowired
     private BookTypeMapper bookTypeMapper;
 
@@ -16,7 +16,12 @@ public class BookTypeService {
         return bookTypeMapper.getAll();
     }
 
-    public int add(BookType bt) {
+    public int add(String bt) {
         return bookTypeMapper.add(bt);
+    }
+
+    @Override
+    public int deleteBookTypeByID(int bookTypeID) {
+        return bookTypeMapper.deleteBookTypeByID(bookTypeID);
     }
 }
