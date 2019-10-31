@@ -16,9 +16,11 @@
     <meta name="_csrf" content="${_csrf.token}"/>
     <!-- default header name is X-CSRF-TOKEN -->
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <link rel="stylesheet" href="../../../static/css/animate (2).css">
 </head>
 <body>
 <div class="layout-panel-east">
+    <h1 class="animated infinite bounce delay-2s">欢迎进入我的图书管理系统！</h1>
     <form id="form1">
         <table class="tab-pane">
             <tr class="table-condensed" style="padding-left: 10px;padding-right: 10px">
@@ -31,7 +33,8 @@
                     <input id="publishment" name="publishment" class="textbox-text">
                 </td>
                 <td>
-                    <button class="search" style="width: 80px"onclick="flushTable()" value="搜索"></button>
+                    <!--                    <a href="#"  data-options="iconCls:'icon-search'" style="width: 80px">search</a>-->
+                    <input class="glyphicon-search" type="button" style="width: 80px" onclick="flushTable()" value="搜索">
                 </td>
             </tr>
         </table>
