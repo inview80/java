@@ -1,6 +1,5 @@
 package boot.mystaic.myweb;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -12,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * @Description: TODO
  * @date 2019年10月31日
  */
-@Configuration
+//@Configuration
 public class WebMvcConfig extends WebMvcConfigurationSupport {
     //这里配置静态资源文件的路径导包都是默认的直接导入就可以
 

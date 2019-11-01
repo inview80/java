@@ -1,8 +1,8 @@
-document.write("<script  type='text/javascript' src='/static/js/jquery.min.js'></script>");
-document.write("<script  type='text/javascript' src='/static/js/bootstrap.min.js'></script>");
-document.write("<script  type='text/javascript' src='/static/js/bootstrap-table.min.js'></script>");
+document.write("<script  type='text/javascript' src='/webjars/jquery/1.11.1/jquery.js'></script>");
+document.write("<script  type='text/javascript' src='/webjars/bootstrap/3.3.5/js/bootstrap.js'></script>");
+document.write("<script  type='text/javascript' src='/webjars/bootstrap-table/1.9.1-1/bootstrap-table.js'></script>");
 
-function loadUp() {
+function setup() {
     $("#dg").bootstrapTable({
         // url: "/book/list",
         // type: "post",
@@ -46,6 +46,7 @@ function loadUp() {
 }
 
 function dateFormat(value, row, index) {
+    if(value==null) return null;
     return formatDate(value);
     // var date = new Date(value);
     // return value.substring(0, 10);

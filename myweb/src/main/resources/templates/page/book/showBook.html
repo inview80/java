@@ -1,62 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>显示图书详情</title>
-    <!--    <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>-->
-    <!--    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>-->
-    <!--    <link rel="stylesheet" href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css">-->
-    <!--    <script src="/webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 
-    <link rel="stylesheet" href="/static/css/bootstrap-table.min.css">
-    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css">
-    <script type="text/javascript" src="/static/js/showBook.js"></script>
+    <script  th:src="@{/js/showBook.js}"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap-table/1.9.1-1/bootstrap-table.css">
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
 
     <meta name="_csrf" content="${_csrf.token}"/>
     <!-- default header name is X-CSRF-TOKEN -->
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
-    <link rel="stylesheet" href="../../../static/css/animate (2).css">
+
 </head>
 <body>
-<div class="layout-panel-east">
-    <h1 class="animated infinite bounce delay-2s">欢迎进入我的图书管理系统！</h1>
-    <form id="form1">
-        <table class="tab-pane">
-            <tr class="table-condensed" style="padding-left: 10px;padding-right: 10px">
+<div class="layout-panel-east"
+     style="position: absolute; left: 50%; transform: translateX(-50%) translateY(-50%);
+     top:50%;text-align: center">
+    <h1 class="animated infinite pulse delay-4s">欢迎进入我的图书管理系统！</h1>
+    <hr/>
+    <form id="form1" style="align-content: center">
+        <table class="fixed-table-header" >
+            <tr>
                 <td>图书名称</td>
                 <td>
-                    <input id="bookName" name="bookName" class="textbox-text">
+                    <input id="bookName" name="bookName" class="text-field">
                 </td>
                 <td>出版社</td>
                 <td>
-                    <input id="publishment" name="publishment" class="textbox-text">
+                    <input id="publishment" name="publishment" class="text-input">
                 </td>
                 <td>
                     <!--                    <a href="#"  data-options="iconCls:'icon-search'" style="width: 80px">search</a>-->
-                    <input class="animated infinite flash" type="button" style="width: 80px" onclick="flushTable()" value="搜索">
+                    <input class="animated infinite flash" type="button" onclick="flushTable()" value="搜索">
                 </td>
             </tr>
         </table>
 
         <div id="tableP">
-            <table id="dg" class="table-hover" style="background: lightgray;height: 500px;width: 600px">
-                <thead class="table-condensed">
-                <!--                <tr>-->
-                <!--                    <th><input type="checkbox" id="checkbox_all"></th>-->
-                <!--                    <th style="width: 80px">编号</th>-->
-                <!--                    <th style="width: 180px">名称</th>-->
-                <!--                    <th style="width: 180px">类名</th>-->
-                <!--                    <th>出版社</th>-->
-                <!--                    <th>出版时间</th>-->
-                <!--                    <th>作者</th>-->
-                <!--                    <th>价格</th>-->
-                <!--                    <th>用户编号</th>-->
-                <!--                    <th>出借时间</th>-->
-                <!--                </tr>-->
-                </thead>
-                <tbody class="table-striped"></tbody>
-            </table>
+            <style >
+                table{
+                    /*width:100px;*/
+                    table-layout:fixed; /* 这句话必须有 定义了表格的布局 */
+                }
+                td{
+                    width:100px;
+                    word-break:keep-all;/* 不换行 */
+                    white-space:nowrap;/* 不换行 */
+                    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+                    text-overflow:clip;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+                }
+            </style>
+            <table id="dg" class="bootstrap-table" style="height: 500px;width: 600px;border: dashed 1px dodgerblue"></table>
         </div>
 
     </form>
@@ -65,5 +61,5 @@
 </body>
 </html>
 <script>
-    loadUp();
+    setup();
 </script>

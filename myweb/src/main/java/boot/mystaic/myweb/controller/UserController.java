@@ -66,6 +66,6 @@ public class UserController {
 
     @RequestMapping("/a")
     private String aa(){
-        return "/page/user/showAllUser";
+        return "page/user/showAllUser";
     }
 }
