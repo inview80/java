@@ -65,7 +65,9 @@ public class UserController {
     }
 
     @RequestMapping("/a")
-    private String aa(){
+    private String aa() {
         return "page/user/showAllUser";
     }
+
+
 }

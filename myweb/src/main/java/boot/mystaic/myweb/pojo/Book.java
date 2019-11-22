@@ -1,12 +1,15 @@
 package boot.mystaic.myweb.pojo;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.Date;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
-@lombok.Data@NoArgsConstructor@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
     private String bookID;
     private String bookName;

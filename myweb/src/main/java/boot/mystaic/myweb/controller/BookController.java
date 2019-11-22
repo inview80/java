@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 
 @Slf4j
@@ -40,9 +39,9 @@ public class BookController {
     @ResponseBody
     public List<Book> list(@RequestParam(value = "bookName",required = false)String bookName, @RequestParam(value = "publishment",required = false)String publishment){
         var book=new Book();
-        Optional.ofNullable(bookName).ifPresent(val -> book.setBookName(val.trim()));
-        Optional.ofNullable(publishment).ifPresent(val -> book.setPublishment(val.trim()));
-        log.info("{}",book);
+//        Optional.ofNullable(bookName).ifPresent(val -> book.setBookName(val.trim()));
+//        Optional.ofNullable(publishment).ifPresent(val -> book.setPublishment(val.trim()));
+//        log.info("{}",book);
         List<Book> tmp=bookService.findBooks(book);
         log.info("{}", tmp);
         return tmp;
