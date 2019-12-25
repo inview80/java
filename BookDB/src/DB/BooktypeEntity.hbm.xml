@@ -9,7 +9,7 @@
         <property name="bookTypeName" column="BookTypeName"/>
         <!--<set name="books" inverse="true" fetch="join" lazy="true" >-->
             <!--<key column="booktype"/>-->
-            <!--<one-to-many class="DB.BookEntity"/>-->
+        <!--<one-to-many class="DB.BookEntity"/>-->
         <!--</set>-->
     </class>
 </hibernate-mapping>

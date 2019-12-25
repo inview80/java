@@ -11,15 +11,22 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserService userService=null;
 
+    /**
+     * 从数据库中读取用户名及密码、权限，存入到UserDetails类中
+     * @param s 用户名
+     * @return
+     * @throws UsernameNotFoundException
+     */
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userService.getUserByName(s);
+        User user=Optional.ofNullable(userService.getUserByName(s)).orElseThrow(()->new UsernameNotFoundException("没有此用户名！"));
         var authorityList=new ArrayList<GrantedAuthority>();
             authorityList.add(  new SimpleGrantedAuthority(user.getPowerDetails().toString()));
 

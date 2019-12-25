@@ -60,14 +60,15 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 // 如果有允许匿名的url，填在下面
                 .antMatchers("/login","/getVerifyCode").permitAll()
-                .anyRequest().authenticated()
+//                .anyRequest().authenticated()
+                .anyRequest().anonymous()
                 .and()
                 // 设置登陆页
                 .formLogin().loginPage("/login")
                 // 设置登陆成功页
                 .defaultSuccessUrl("/").permitAll()
                 // 登录失败Url
-                .failureUrl("/login/error")
+//                .failureUrl("/login/error")
                 // 自定义登陆用户名和密码参数，默认为username和password
 //                .usernameParameter("username")
 //                .passwordParameter("password")

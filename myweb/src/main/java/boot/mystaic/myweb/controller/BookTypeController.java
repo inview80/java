@@ -48,10 +48,11 @@ public class BookTypeController {
                 log.info("写入数据库成功。");
                 return bt;
             }
-        }else {
+        } else {
             log.info("图书类型名称不能空");
         }
         log.info("写入数据库失败");
         return null;
     }
+
 }

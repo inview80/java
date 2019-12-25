@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5109a490-b8fd-4a6a-9202-bf09234aea39" name="默认更改列表" comment="默认更改列表">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/exception/ErrorReturn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/exception/ExceptionThrowableHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/randomdata/WriteDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/randomdata/WriteDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/MySecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/MySecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/controller/BookTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/controller/BookTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/secret/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/secret/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myweb/src/main/java/boot/mystaic/myweb/verify/ImageCode.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,34 +125,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WriteDBTest.booktype">
-    <configuration name="RandomUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="Main" type="Application" factoryName="应用程序" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="RandomData" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="randomdata.base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="randomdata" />
-      <option name="MAIN_CLASS_NAME" value="randomdata.RandomUtilTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomUtilTest.getFullChineseName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RandomData" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="randomdata.base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="randomdata" />
-      <option name="MAIN_CLASS_NAME" value="randomdata.RandomUtilTest" />
-      <option name="METHOD_NAME" value="getFullChineseName" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -183,6 +165,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WriteDBTest.jj" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RandomData" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="randomdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="randomdata" />
+      <option name="MAIN_CLASS_NAME" value="randomdata.WriteDBTest" />
+      <option name="METHOD_NAME" value="jj" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WriteDBTest.publish" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RandomData" />
       <extension name="coverage">
@@ -201,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="JUnit.WriteDBTest.jj" />
         <item itemvalue="JUnit.WriteDBTest.booktype" />
         <item itemvalue="JUnit.WriteDBTest.publish" />
         <item itemvalue="JUnit.RandomUtilTest.getPublishment" />
-        <item itemvalue="JUnit.RandomUtilTest" />
-        <item itemvalue="JUnit.RandomUtilTest.getFullChineseName" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +235,7 @@
       <workItem from="1572311843953" duration="551000" />
       <workItem from="1572312474556" duration="1835000" />
       <workItem from="1572314425802" duration="953000" />
+      <workItem from="1575359990544" duration="4881000" />
     </task>
     <task id="LOCAL-00001" summary="19-10-8 15：03">
       <created>1570518227213</created>
@@ -261,47 +260,6 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.09 at 10h 25m 53s.xml">
-      <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_readConfig - 2019.10.09 at 10h 28m 04s.xml">
-      <configuration name="RandomUtilTest.readConfig" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getFullChineseName - 2019.10.09 at 10h 30m 07s.xml">
-      <configuration name="RandomUtilTest.getFullChineseName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest - 2019.10.09 at 10h 30m 50s.xml">
-      <configuration name="RandomUtilTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomUtilTest_getPublishment - 2019.10.28 at 14h 56m 07s.xml">
-      <configuration name="RandomUtilTest.getPublishment" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WriteDBTest_publish - 2019.10.28 at 15h 27m 08s.xml">
-      <configuration name="WriteDBTest.publish" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WriteDBTest_publish - 2019.10.28 at 15h 28m 49s.xml">
-      <configuration name="WriteDBTest.publish" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WriteDBTest_publish - 2019.10.28 at 15h 36m 19s.xml">
-      <configuration name="WriteDBTest.publish" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WriteDBTest_booktype - 2019.10.28 at 15h 43m 06s.xml">
-      <configuration name="WriteDBTest.booktype" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WriteDBTest_booktype - 2019.10.28 at 15h 45m 58s.xml">
-      <configuration name="WriteDBTest.booktype" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
